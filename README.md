@@ -81,3 +81,9 @@ libtool -static lib/vectors-x86_64.o -o lib/libvectors-x86_64.a -arch x86_64
 # Create a universal static binary
 libtool -static lib/vectors.o -o lib/libvectors.a
 ```
+
+Importantly, we can compile using the iPhoneOS libraries
+
+```
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cpp -isysroot/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk  --target=arm64-apple-ios src/vectors.c
+```
